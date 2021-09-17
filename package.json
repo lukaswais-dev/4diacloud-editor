@@ -10,14 +10,14 @@
 		"Other"
 	],
 	"activationEvents": [
-        "onCommand:4diacloud-editor.helloWorld"
+        "onCommand:4diacloud-editor.start"
 	],
 	"main": "./dist/extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "4diacloud-editor.helloWorld",
-				"title": "Hello World"
+				"command": "4diacloud-editor.start",
+				"title": "4diacloud Editor"
 			}
 		]
 	},
