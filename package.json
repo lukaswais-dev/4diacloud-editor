@@ -1,5 +1,5 @@
 {
-  "name": "4diacloud-editor",
+	"name": "4diacloud-editor",
 	"displayName": "4diacloud-editor",
 	"description": "A new experimental fronted for the 4diac ide",
 	"version": "0.0.1",
@@ -10,16 +10,52 @@
 		"Other"
 	],
 	"activationEvents": [
-        "onCommand:4diacloud-editor.start"
+		"onCommand:4diacloud-editor.start"
 	],
 	"main": "./dist/extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "4diacloud-editor.start",
-				"title": "4diacloud Editor"
+				"command": "example.diagram.open",
+				"title": "Open in Diagram",
+				"category": "Example Diagram"
+			},
+			{
+				"command": "example.diagram.fit",
+				"title": "Fit to Screen",
+				"category": "Example Diagram"
+			},
+			{
+				"command": "example.diagram.center",
+				"title": "Center selection",
+				"category": "Example Diagram"
+			},
+			{
+				"command": "example.diagram.export",
+				"title": "Export diagram to SVG",
+				"category": "Example Diagram"
 			}
-		]
+		],
+		"menus": {
+			"commandPalette": [
+				{
+					"command": "example.diagram.open",
+					"when": "editorLangId == 'example'"
+				},
+				{
+					"command": "example.diagram.fit",
+					"when": "example-diagram-focused"
+				},
+				{
+					"command": "example.diagram.center",
+					"when": "example-diagram-focused"
+				},
+				{
+					"command": "example.diagram.export",
+					"when": "example-diagram-focused"
+				}
+			]
+		}
 	},
 	"scripts": {
 		"vscode:prepublish": "yarn run package",
@@ -46,6 +82,7 @@
 		"vscode-test": "^1.5.2",
 		"ts-loader": "^9.2.2",
 		"webpack": "^5.38.1",
-		"webpack-cli": "^4.7.0"
+		"webpack-cli": "^4.7.0",
+		"sprotty-vscode": "latest"
 	}
 }
