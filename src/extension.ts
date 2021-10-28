@@ -29,12 +29,22 @@ function getWebviewContent(scriptUri: vscode.Uri) {
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <script src="https://unpkg.com/gojs/release/go-debug.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.20.0/cytoscape.min.js" integrity="sha512-cjmYAonfXK+azDmWqvnqq8xmygHRHqVI7S0zuRxQnvcYVeoakwthRX6pPKoXfG1oIjDvMUtteRV9PhQjJwKWxQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
+<style>
+    #cy {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+    }
+</style>
+
 <body>
-  <div id="myDiagramDiv" style="width:400px; height:150px; background-color: #DAE4E4;"></div>
-  <script src="${scriptUri}"></script>
+<div id="cy"></div>
+<script src="${scriptUri}"></script>
 </body>
 
 </html>`;
