@@ -7,56 +7,25 @@
 		"vscode": "^1.60.0"
 	},
 	"license": "EPL-2.0",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/lukaswais-dev/4diacloud-editor"
+	},
 	"categories": [
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:4diacloud-editor.start"
+		"onCommand:4diac.start"
 	],
-	"main": "./dist/extension.js",
+	"main": "./src/extension.ts",
 	"contributes": {
-		"commands": [
+		"commands":[
 			{
-				"command": "example.diagram.open",
-				"title": "Open in Diagram",
-				"category": "Example Diagram"
-			},
-			{
-				"command": "example.diagram.fit",
-				"title": "Fit to Screen",
-				"category": "Example Diagram"
-			},
-			{
-				"command": "example.diagram.center",
-				"title": "Center selection",
-				"category": "Example Diagram"
-			},
-			{
-				"command": "example.diagram.export",
-				"title": "Export diagram to SVG",
-				"category": "Example Diagram"
+				"command": "4diac.start",
+				"title": "Start 4diac ide",
+				"category": "4diac"
 			}
-		],
-		"menus": {
-			"commandPalette": [
-				{
-					"command": "example.diagram.open",
-					"when": "editorLangId == 'example'"
-				},
-				{
-					"command": "example.diagram.fit",
-					"when": "example-diagram-focused"
-				},
-				{
-					"command": "example.diagram.center",
-					"when": "example-diagram-focused"
-				},
-				{
-					"command": "example.diagram.export",
-					"when": "example-diagram-focused"
-				}
-			]
-		}
+		]
 	},
 	"scripts": {
 		"vscode:prepublish": "yarn run package",
@@ -70,7 +39,7 @@
 		"test": "node ./out/test/runTest.js"
 	},
 	"devDependencies": {
-		"@types/vscode": "^1.60.0",
+		"@types/vscode": "^1.61.0",
 		"@types/glob": "^7.1.3",
 		"@types/mocha": "^8.2.2",
 		"@types/node": "14.x",
@@ -83,7 +52,6 @@
 		"vscode-test": "^1.5.2",
 		"ts-loader": "^9.2.2",
 		"webpack": "^5.38.1",
-		"webpack-cli": "^4.7.0",
-		"sprotty-vscode": "latest"
+		"webpack-cli": "^4.7.0"
 	}
 }
