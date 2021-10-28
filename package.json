@@ -15,13 +15,13 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:4diac.start"
+		"onCommand:fourdiac.start"
 	],
-	"main": "./src/extension.ts",
+	"main": "./dist/extension.js",
 	"contributes": {
 		"commands":[
 			{
-				"command": "4diac.start",
+				"command": "fourdiac.start",
 				"title": "Start 4diac ide",
 				"category": "4diac"
 			}
